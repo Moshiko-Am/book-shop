@@ -1,0 +1,191 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  font-family: 'Caveat', cursive;
+  background-image: linear-gradient(to Bottom, rgb(202, 229, 255), #beafff);
+  overflow: hidden;
+}
+
+body.rtl {
+  direction: rtl;
+}
+
+.lang-select {
+  position: absolute;
+  right: 1rem;
+  margin-top: 1rem;
+}
+
+.main-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header {
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.add-btns-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 0px rgba(164, 164, 164, 0.75);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Caveat', cursive;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: whitesmoke;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  filter: brightness(0.8);
+}
+
+.btn-add {
+  background-color: green;
+  margin-right: 1rem;
+}
+
+.btn-create {
+  background-color: green;
+  margin-left: 1rem;
+}
+
+.btn-read {
+  background-color: rgb(114, 114, 245);
+}
+
+.btn-update,
+.btn-update-price {
+  background-color: rgb(126, 126, 17);
+}
+
+.btn-delete {
+  background-color: rgb(238, 62, 62);
+}
+
+.book-rate {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 2rem;
+}
+
+.btn-lower-rate,
+.btn-higher-rate,
+.btn-close-modal {
+  background-color: lightgray;
+  color: black;
+  font-weight: 700;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+::placeholder {
+  text-align: center;
+  font-weight: 700;
+  opacity: 0.5;
+}
+
+input {
+  box-shadow: 0px 0px 5px 0px rgba(164, 164, 164, 0.75);
+  border-radius: 5px;
+  padding: 1rem;
+  border: 0.5px solid grey;
+  outline: none;
+}
+
+input[name='update-price'] {
+  width: 50%;
+  margin-right: 1rem;
+}
+
+table {
+  border-radius: 10px;
+  font-size: 3rem;
+  font-weight: 700;
+  background-color: wheat;
+  transition: all 0.3s;
+}
+
+.book-desc {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+th {
+  font-size: 4rem;
+  padding: 0 2rem;
+}
+
+.th-click {
+  cursor: pointer;
+}
+
+tr:nth-of-type(even) {
+  background-color: #fff;
+}
+
+td {
+  padding: 1rem;
+}
+
+.book-price,
+.book-title {
+  margin: 0;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+}
+
+.modal {
+  padding: 2rem;
+  border-radius: 10px;
+  width: 70%;
+  background-color: rgb(32, 79, 133);
+  position: fixed;
+  top: 10%;
+  transform: translateX(100vw);
+  transition: 0.3s;
+}
+
+.modal-show {
+  transform: translateX(0);
+  margin: 0;
+}
+
+img {
+  width: 100px;
+}
+
+.pagination {
+  font-size: 2em;
+  position: absolute;
+  bottom: 10vh;
+}

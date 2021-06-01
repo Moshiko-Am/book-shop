@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Book Shop</title>
+</head>
+
+<body onload="init()">
+    <div class="main-container">
+        <div class="lang-select">
+            <select onchange="onSetLang(this.value)">
+                <option value="en">English</option>
+                <option value="he">עברית</option>
+            </select>
+        </div>
+        <h1 data-trans="title" class="header"> Welcome to my Bookshop</h1>
+        <div class="add-btns-container">
+            <button data-trans="btn-add-book" class="btn btn-add" onclick="onAddBook()">Add new book</button>
+            <div class="add-book-inputs">
+                <input data-trans="book-name" type="text" name="add-book-name" placeholder="Book name" hidden>
+                <input data-trans="book-price" type="number" name="add-book-price" placeholder="Book price" hidden>
+            </div>
+            <button data-trans="btn-create" class="btn btn-create" onclick="onCreateBook()" hidden>Add</button>
+        </div>
+        <table class="books-table">
+            <thead>
+                <tr>
+                    <th data-trans="th-id">Id</th>
+                    <th data-trans="th-title" class="th-click" onclick="onSetSort('Title')">Title</th>
+                    <th data-trans="th-price" class="th-click" onclick="onSetSort('Price')">Price</th>
+                    <th data-trans="th-actions" colspan="3">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <section class="modal">
+            <button class="btn btn-lower-rate">-</button>
+            <span class="book-rate"></span>
+            <button class="btn btn-higher-rate">+</button>
+            <h5 class="book-title"></h5>
+            <h6 class="book-price"></h6>
+            <img class="book-img" src="" />
+            <p class="book-desc"></p>
+            <button data-trans="btn-close" onclick="onCloseModal()" class="btn btn-close-modal">Close</button>
+        </section>
+        <div class="pagination">
+            <button data-trans="btn-prev" onclick="onTurnPage(-1)">Prev</button>
+            <span></span>
+            <button data-trans="btn-next" onclick="onTurnPage(1)">Next</button>
+        </div>
+    </div>
+
+
+
+    <script src="js/i18n-services.js"></script>
+    <script src="js/book-storage.js"></script>
+    <script src="js/book-service.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
